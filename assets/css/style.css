@@ -6,6 +6,8 @@ body {
 .header {
     background-color: #fff;
     border: 2px solid #ccc;
+    border-left: none;
+    border-right: none;
     font-family: 'Georgia', Times, "Times New Roman", serif;
     overflow: hidden;
 } 
@@ -18,14 +20,14 @@ body {
     width: 150px;
     margin: 0;
     position: relative;
-    left: 150px;
+    left: 100px;
   }
 
 
 /* Header Navbar start */
 nav {
     float: right;
-    padding-right: 150px;
+    padding-right: 100px;
 }
 
 li {
@@ -160,9 +162,48 @@ textarea {
     color: white;
 }
 
+@media screen and (max-width: 980px) {
+    .logo {
+        position: static;
+        left: initial;
+        margin-left: 45px;
+    }
+    .container {
+        width: 60%;
+        margin-left: 45px;
+        overflow: hidden;
+    }
+    nav {
+        padding-right: 45px;
+    }
 
 
-@media screen and ( max-width: 640px) {
+@media screen and (max-width: 768px) {
+    .logo {
+        position: static;
+        left: initial;
+        margin-left: 15px;
+    }
+    nav {
+        float: right;
+        padding-right: 15px;
+    }
+    .container {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-left: 15px;
+    }
+    #portfolio-image {
+        width: 35%;
+        height: auto;
+    }
+}
+    
+
+
+
+@media screen and (max-width: 640px) {
     .header {
         background-color: #4aaaa5;
         position: static;
@@ -187,7 +228,7 @@ textarea {
         float: none;
         padding-top: 5px;
         padding-bottom: 25px;
-}
+    }
 
     ul {
         width: 200px;
@@ -197,7 +238,8 @@ textarea {
 
 
     .container {
-        width: 90%;
+        width: 95%;
+        margin: 0 auto;
         overflow: hidden;
         margin-top: 25px;
     }
@@ -207,19 +249,18 @@ textarea {
     }
 
     #portfolio-image {
-        float: none;
-        width: 200px;
-        height: 300px;
+        float: initial;
+        width: 50%;
+        height: auto;
     }
 
 /*portfolio*/
     .boxes {
         display: block;
-        height: 175px;
+        height: auto;
         width: 75%;
         margin: 0 auto;
-        padding-top: 5px;
-        padding-bottom: 150px;
+        padding: 0;
     }
 
     .images {
